@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+    <div class="jumbotron">
+<h1 class="display- ">Soccer</h1>
+<p class="lead">A website built with Django.</p> <p class="lead">
+<a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">Latest Articles and News</a>
+</p> </div>
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">logout</a></p>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a> |
+  <a href="{% url 'signup' %}">signup</a>
+{% endif %}
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1" ></li>
+    <li data-target="#demo" data-slide-to="2" ></li>
+    <li data-target="#demo" data-slide-to="3" ></li>
+    <li data-target="#demo" data-slide-to="4" ></li>
+    <li data-target="#demo" data-slide-to="5" ></li>
+    <li data-target="#demo" data-slide-to="6" ></li>
+
+
+
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+      <div class="carousel-item active">
+      <img src="{% static "James Rodriguez.jpeg" %}" alt="James Rodriguez" width="900" height="500">
+    </div>
+    <div class="carousel-item ">
+      <img src="{% static "Karim Benzema.jpg" %}" alt="Karim Benzema" width="900" height="500">
+    </div>
+    <div class="carousel-item ">
+      <img src="{% static "2002-fifa-world-cup-final Brazil.jpeg" %}" alt="2002-fifa-world-cup-final Brazil" width="900" height="500">
+    </div>
+      <div class="carousel-item ">
+      <img src="{% static "Spain 2010 World Cup.jpg" %}" alt="cristiano ronaldo real madrid" width="900" height="500">
+    </div>
+      <div class="carousel-item ">
+      <img src="{% static "Germany_2014 world cup.jpg" %}" alt="cristiano ronaldo_Messi.jpg" width="900" height="500">
+       <div class="carousel-item ">
+      <img src="{% static "CristianoRonaldo_uventus.jpeg" %}" alt="James Rodriguez" width="900" height="500">
+    </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+
+
+    <iframe width="700" height="480" src="https://www.youtube.com/embed/3Hv5UfZPMpA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="700" height="480" src="https://www.youtube.com/embed/2sJKHj2YVHc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="700" height="480" src="https://www.youtube.com/embed/kFMZUxX6K6o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <style>
+        body{background-color: #0f5b76;}
+        p{color: #131a0b;}
+
+        </style>
+        </head>
+        <body>
+
+        </body>
+        </html>
+{% endblock %}
